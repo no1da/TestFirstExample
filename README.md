@@ -14,7 +14,7 @@ test-cases.md
 - Автоматизация UI: Selenium WebDriver
 - Тестовый фреймворк: JUnit 4
 - Сборщик проекта: Maven
-- Шаблон проектирования: Page Object Model
+- Шаблон проектирования: page Object Model
 
 ### Настройка окружения
 
