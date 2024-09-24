@@ -1,4 +1,4 @@
-package Util;
+package util;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 import java.util.Optional;
-
+/**
+ * Класс для взаимодействия с таблцей вкалдки Customers
+ */
 public class Table {
 
     private WebElement tableElement;
@@ -16,8 +18,10 @@ public class Table {
         this.tableElement = tableElement;
         this.driver = driver;
     }
-
-    public String getNames() {
+    /**
+     * Класс для получения и обработки списка имён для выбора имени на удаление
+     */
+    public String getNamesForRemove() {
         List<WebElement> rows = tableElement.findElements(By.xpath(".//tr/td[1]"));
         List<String> names = rows
                 .stream()
@@ -33,5 +37,16 @@ public class Table {
                 );
         return nameForRemove.get();
     }
+    /**
+     * Класс для получения списка имён всех клиентов
+     */
+    public List<String> getAllNames() {
+        List<WebElement> rows = tableElement.findElements(By.xpath(".//tr/td[1]"));
+        List<String> names = rows
+                .stream()
+                .map(WebElement::getText)
+                .toList();
 
+        return names;
+    }
 }
