@@ -12,7 +12,7 @@ target/allure-results
 *.iws
 *.iml
 *.ipr
-.idea
+.idea/
 .allure
 
 
