@@ -23,7 +23,7 @@ test-cases.md
    - Java Development Kit  17.
    - Apache Maven.
    - Google Chrome (последняя стабильная версия).
-2. Для запуска палельного тестирования используется механизм конфигурации Create Run со следущими аргументами:
+2. Для запуска параллельного тестирования используется механизм конфигурации Create Run со следущими аргументами:
    - Djunit.jupiter.execution.parallel.enabled=true
    - Djunit.jupiter.execution.parallel.mode.default=concurrent
 
