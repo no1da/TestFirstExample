@@ -2,12 +2,23 @@ package util;
 
 import java.util.Random;
 /**
- * Класс генерирования Post Code и First Name
+ * Класс для генерации Post Code и преобразования его в First Name.
+ * <p>
+ * Этот класс предоставляет методы для генерации случайного
+ * Post Code и преобразования Post Code в First Name,
+ * используя определенные алгоритмы для преобразования чисел
+ * в символы.
+ * </p>
  */
-
 public class GeneratePostCodeName {
     /**
-     * Класс генерирования Post Code
+     * Генерирует случайный Post Code в виде строки.
+     * <p>
+     * Методу присвоен диапазон от 1000000000 до 9999999999,
+     * что обеспечивает 10-значное число.
+     * </p>
+     *
+     * @return сгенерированный Post Code в виде строки.
      */
     public static String generatePostCode() {
         Random random = new Random();
@@ -15,7 +26,16 @@ public class GeneratePostCodeName {
         return Long.toString(postcode);
     }
     /**
-     * Класс конвертации Post Code в First Name
+     * Преобразует Post Code в First Name, используя определенные правила.
+     * <p>
+     * Каждые две цифры Post Code превращаются в
+     * букву английского алфавита, где 0 соответствует 'a',
+     * 1 - 'b' и так далее, с использованием математической
+     * операции для достижения корректного диапазона символов.
+     * </p>
+     *
+     * @param postCode почтовый код, который будет преобразован.
+     * @return First Name, основанное на входном почтовом коде.
      */
     public static String convertToName(String postCode) {
         StringBuilder name = new StringBuilder();

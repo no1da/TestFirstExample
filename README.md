@@ -12,9 +12,10 @@ test-cases.md
 - Язык программирования: Java
 - Версия Java: 17
 - Автоматизация UI: Selenium WebDriver
-- Тестовый фреймворк: JUnit 4
+- Тестовый фреймворк: JUnit 5
 - Сборщик проекта: Maven
 - Шаблон проектирования: page Object Model
+- Документация Allure
 
 ### Настройка окружения
 
@@ -22,6 +23,9 @@ test-cases.md
    - Java Development Kit  17.
    - Apache Maven.
    - Google Chrome (последняя стабильная версия).
+2. Для запуска палельного тестирования используется механизм конфигурации Create Run со следущими аргументами:
+   - Djunit.jupiter.execution.parallel.enabled=true
+   - Djunit.jupiter.execution.parallel.mode.default=concurrent
 
    
 
