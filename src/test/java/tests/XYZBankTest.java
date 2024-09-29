@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Test;
 import page.AddCustomerPage;
@@ -46,6 +47,9 @@ public class XYZBankTest extends BaseTest {
      */
     @Test
     @Step("Тестирование функции добавления клиента")
+    @Description("Тест состоит из нескольких последовательных команд: открытие вкаладки добавления клиента, заполнение " +
+            "полей, нажатие кнопки Add, подтверждение Allert, открытие вкаладки Customer, " +
+            "поиск добавленного клиента в таблице")
     public void addCustomerTest() {
         addCustomerPage = new AddCustomerPage(driver);
         addCustomerPage.fillFieldsAndAddCustomer(firstName, config.getLastName(), postCode);
@@ -65,6 +69,8 @@ public class XYZBankTest extends BaseTest {
      */
     @Test
     @Step("Тестирование функции сортировки по имени в обратном алфавитном порядке ")
+    @Description("Тест состоит из нескольких последовательных команд: открытие вкаладки Customers, получение списка " +
+            "First Name, сортировка по First Name, получение сортированного списка по First Name, сравнение двух списков")
     public void sortCustomersTest() {
         customersPage = new CustomersPage(driver);
         customersPage.openCustomers();
@@ -85,6 +91,8 @@ public class XYZBankTest extends BaseTest {
      */
     @Test
     @Step("Тестирование функции удаления клиента")
+    @Description("Тест состоит из нескольких последовательных команд: открытие вкаладки Customers, получение списка " +
+            "First Name, выбор First Name на удаление, удаление выбранного клиента, поиск в таблице удалённого клиента")
     public void deleteCustomerTest() {
         customersPage = new CustomersPage(driver);
         customersPage.openCustomers();
